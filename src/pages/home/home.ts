@@ -14,8 +14,8 @@ export class HomePage {
 
 
 
-  NavegarALugar(){
-    this.navCtrl.push(LugarPage);
+  NavegarALugar(name){
+    this.navCtrl.push(LugarPage,{nombre: name} );
   }
 
 } 
