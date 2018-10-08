@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TerceraPage } from '../tercera/tercera';
 
 /**
  * Generated class for the LugarPage page.
@@ -14,10 +15,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'lugar.html',
 })
 export class LugarPage {
+  nombreLugar = '';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  this.nombreLugar = navParams.get('nombre');  
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LugarPage');
   }
+  NavegarAtras(){
+    this.navCtrl.pop();
+  }
+  NavegarTercera(){
+    this.navCtrl.push(TerceraPage);
+  }
 }
+
+
